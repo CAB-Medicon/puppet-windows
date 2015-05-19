@@ -54,7 +54,6 @@ define windows::unzip(
   $options          = '20',
   $command_template = 'windows/unzip.ps1.erb',
   $timeout          = 300,
-  $noop             = false,
 ) {
   validate_absolute_path($destination)
 
