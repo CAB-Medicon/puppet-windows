@@ -69,5 +69,6 @@ define windows::unzip(
     provider    => $provider,
     timeout     => $timeout,
     noop        => $noop,
+    logoutput   => true,
   }
 }
