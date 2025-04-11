@@ -64,7 +64,7 @@
 #  Advanced use only; Windows update service, defaults to 'wuauserv'.
 #
 class windows::update(
-  $ensure               = 'enabled',
+  $ensure               = 'disabled',
   $type                 = '2',
   $all_users            = false,
   $detection_frequency  = undef,
