@@ -68,5 +68,8 @@ define windows::unzip(
     unless      => $unless,
     provider    => $provider,
     timeout     => $timeout,
+    noop        => $noop,
+    logoutput   => true,
+    loglevel    => 'debug',
   }
 }
