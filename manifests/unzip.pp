@@ -52,22 +52,30 @@ define windows::unzip(
   $zipfile          = $name,
   $provider         = 'powershell',
   $options          = '20',
-  $command_template = 'windows/unzip.ps1.erb',
   $timeout          = 300,
-) {
+  $logoutput        = on_failure,
+  $fallback         = false,
+  ) {
   validate_absolute_path($destination)
 
   if (! $creates and ! $refreshonly and ! $unless){
     fail("Must set one of creates, refreshonly, or unless parameters.\n")
   }
 
-  exec { "unzip-${name}":
+ if ($fallback){
+    $command_template = 'windows/unzip.ps1.erb'
+  } else{
+    $command_template = 'windows/unzip_dotnet.ps1.erb'
+  }
+
+ exec { "unzip-${name}":
     command     => template($command_template),
     creates     => $creates,
     refreshonly => $refreshonly,
     unless      => $unless,
     provider    => $provider,
     timeout     => $timeout,
+    logoutput   => $logoutput,
     noop        => $noop,
     logoutput   => true,
     loglevel    => 'debug',
