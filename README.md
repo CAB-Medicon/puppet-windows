@@ -1,3 +1,5 @@
+This is a fork of [counsyl/puppet-windows](https://github.com/counsyl/puppet-windows/). See CHANGELOG.md  and LICENSE for more information.
+
 windows
 =======
 
