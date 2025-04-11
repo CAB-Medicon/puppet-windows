@@ -1,18 +1,27 @@
-## 2.0.0-beta (2025-04-11)
-Fork 1.0.6 and incorprated all changes in other forks that where not already part of 1.0.6.
-
-These are:
- * Breeze773/puppet-windows
- * cmchoi2000/puppet-windows
- * akomakom/puppet-windows
+## 2.0.0-beta (2025-04-11)
+
+Fork 1.0.6 and incorporated all changes in other forks that where not already part of 1.0.6.
+
+
+
+These are:
+
+ * Breeze773/puppet-windows
+
+ * cmchoi2000/puppet-windows
+
+ * akomakom/puppet-windows
+
  * Vizibirka/puppet-windows
 
-Thank you.
+Thank you.
+
 I will now try to take over and release a stable version of all your changes for Puppet 8 and onwards.
 
 ## 1.0.6 (8/13/2017)
 
-BUG FIXES:
+BUG FIXES:
+
  * Fix kernel version comparison (@rogerlz)
 
 ## 1.0.5 (8/5/2017)
